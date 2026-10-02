@@ -1,1 +1,668 @@
+WEEK 1 INTERNSHIP REPORT
 
+THREAT LANDSCAPE ANALYSIS
+
+Current Cybersecurity Threats, Attack Vectors and Organizational Impact
+
+
+
+Prepared by
+
+Arjun Vijoy T.V.
+
+Task
+
+Week 1 – Threat Landscape Analysis
+
+Domain
+
+Cybersecurity
+
+Analysis period
+
+Current landscape with emphasis on 2025–2026 evidence
+
+Report date
+
+2 October 2026
+
+
+
+Confidential internship submission – prepared for academic/professional evaluation
+
+
+Page 
+
+1. Executive Summary
+
+The modern cybersecurity threat landscape is characterized by a combination of persistent attack techniques and rapidly evolving technologies. Organizations continue to face ransomware, credential compromise, phishing and social engineering, vulnerability exploitation, malware, distributed denial-of-service (DDoS), insider risk, and third-party or software supply-chain compromise. At the same time, artificial intelligence (AI) is changing the speed, scale and personalization of both attacks and defensive operations.
+
+Recent evidence shows that vulnerability exploitation has become especially important. Verizon's 2025 Data Breach Investigations Report (DBIR), covering more than 22,000 incidents and 12,195 confirmed breaches, reported a 34% increase in vulnerability exploitation and ransomware appearing in 44% of analyzed breaches. The same research found third-party involvement in 30% of breaches, twice the previous year's level. [1][2]
+
+The 2026 ENISA Threat Landscape, based on incidents observed during 2025, identifies ransomware as the most short-term impactful threat and highlights DDoS activity, cyberespionage, cybercrime, hacktivism and the growing use of AI in malicious operations. Public administration was the most targeted sector in the EU dataset. [3]
+
+Microsoft's 2026 Digital Defense Report adds another dimension: nearly 40,000 CVEs were published in the first half of 2026, and Microsoft observed AI being applied to reconnaissance, phishing, vulnerability discovery, malware, exploit development and post-compromise activity. [4]
+
+The central finding of this analysis is that organizations should not treat threats as isolated events. Identity, internet-facing systems, cloud services, software dependencies, endpoints, data and human users are interconnected. A weakness in one trusted component can become an entry point into several others. Effective security therefore requires layered controls, continuous exposure management, strong identity protection, secure software practices, tested recovery processes, employee awareness and threat-informed monitoring.
+
+2. Objectives and Scope
+
+Review recent cybersecurity threats and major trends affecting organizations.
+
+Identify common initial-access and attack vectors used by threat actors.
+
+Analyze the operational, financial, legal, reputational and data-related impacts of cyber incidents.
+
+Examine how AI is changing the threat landscape and the defender's response.
+
+Compare threat patterns across enterprise environments, cloud systems, supply chains and human users.
+
+Provide practical recommendations for reducing exposure and improving cyber resilience.
+
+Scope: This report focuses on organizational cybersecurity and uses recent public research, particularly evidence published in 2025 and 2026. Statistics are reported with their source and measurement period because different reports use different datasets, regions and definitions.
+
+3. Research Methodology
+
+The analysis uses a source-based threat landscape methodology. Public reports from recognized cybersecurity organizations were reviewed to identify recurring attack patterns, changes in attacker behavior and emerging risks. The main sources include ENISA, Verizon, Microsoft and Google Cloud/Mandiant. The approach combines quantitative findings (incident and breach statistics) with qualitative analysis of attack techniques and organizational consequences.
+
+Define the threat categories relevant to modern organizations.
+
+Collect recent evidence from authoritative threat reports.
+
+Group attacks by initial access, execution, persistence, lateral movement, impact and monetization.
+
+Assess the likely organizational impact of each threat.
+
+Identify defensive controls that address the underlying attack paths.
+
+Synthesize the findings into a practical risk-management view.
+
+4. Current Threat Landscape
+
+The current threat environment is best understood as an ecosystem rather than a list of individual malware families. Attackers increasingly combine identity abuse, social engineering, exploitation of exposed services, cloud access and data theft. The objective may be financial extortion, espionage, disruption, fraud, theft of intellectual property or unauthorized access to strategic systems.
+
+Threat area
+
+Current observation
+
+Typical target
+
+Primary consequence
+
+Ransomware & extortion
+
+Persistent and highly disruptive; data theft is often combined with encryption or extortion.
+
+Enterprises, healthcare, public sector, SMEs
+
+Operational outage, data loss, extortion, recovery cost
+
+Vulnerability exploitation
+
+Rapid exploitation of internet-facing systems and perimeter devices.
+
+VPNs, firewalls, servers, applications
+
+Initial access, persistence, data compromise
+
+Credential & identity attacks
+
+Stolen credentials and account abuse remain major entry paths.
+
+Cloud accounts, SSO, remote access
+
+Account takeover, privilege escalation
+
+Phishing & social engineering
+
+Highly personalized messages, mobile attacks and AI-assisted lures increase deception quality.
+
+Employees, administrators, customers
+
+Credential theft, malware execution, fraud
+
+Supply-chain compromise
+
+Third-party involvement creates indirect paths into trusted environments.
+
+Vendors, software, service providers
+
+Widespread access, data compromise
+
+DDoS / hacktivism
+
+Ideology-driven disruption remains significant in geopolitical contexts.
+
+Public services, critical/essential entities
+
+Availability loss, service disruption
+
+AI-enabled attacks
+
+AI is increasingly used for reconnaissance, phishing, automation and exploit-related work.
+
+Broad organizational ecosystem
+
+Faster, scalable and more personalized attacks
+
+Infostealers & malware
+
+Malware can collect passwords, session tokens and other valuable data.
+
+Endpoints and browsers
+
+Account compromise, fraud, secondary intrusion
+
+5. Major Cybersecurity Threats
+
+5.1 Ransomware and Multifaceted Extortion
+
+Ransomware remains one of the most visible and operationally disruptive cyber threats. Modern ransomware campaigns frequently involve more than encrypting files. Threat actors may first obtain access, move through the environment, collect sensitive information and then use the stolen data to pressure the victim. This multifaceted-extortion model can create consequences even when backups prevent successful encryption.
+
+Verizon's 2025 DBIR reported ransomware in 44% of analyzed breaches, an increase from the previous report. Google Cloud/Mandiant's 2025 ransomware analysis also found that vulnerability exploitation was confirmed or suspected in about one-third of incidents it analyzed, often involving VPNs and firewalls. [2][5]
+
+Common entry points: exposed VPNs, stolen credentials, phishing, vulnerable perimeter devices and third parties.
+
+Common progression: initial access → privilege escalation → discovery → lateral movement → data collection → extortion/impact.
+
+Potential impact: downtime, loss of availability, data exposure, recovery expenses and reputational damage.
+
+Key defenses: offline/immutable backups, MFA, network segmentation, EDR, least privilege, rapid patching and tested incident response.
+
+5.2 Phishing and Social Engineering
+
+Social engineering attacks exploit human trust rather than only technical weaknesses. Phishing can deliver malware, steal credentials or persuade a user to approve a fraudulent transaction. Attackers increasingly use personal information and AI-generated text to make messages appear credible. Voice calls, messaging platforms and mobile devices are also used, expanding the attack surface beyond email.
+
+Microsoft's 2026 report states that user execution accounted for 30% of observed initial access and valid accounts for another 20% in its cited Defender Experts data. It also reports a major increase in ClickFix-style attacker-supplied commands executed on devices. [4]
+
+Attack examples: credential harvesting, fake login pages, malicious attachments, QR-code lures, fake support messages and business-email compromise.
+
+Why it succeeds: urgency, authority, familiarity, fear and convincing personalization.
+
+Controls: phishing-resistant MFA where feasible, secure email gateways, user training, browser protection, verification procedures and reporting channels.
+
+5.3 Vulnerability Exploitation and Zero-Day Risk
+
+Vulnerability exploitation occurs when attackers take advantage of weaknesses in software, operating systems, network devices, applications or configurations. Internet-facing systems are particularly attractive because they can provide direct access without requiring an employee to interact with a malicious message.
+
+Verizon reported a 34% increase in exploitation of vulnerabilities as an initial attack vector in its 2025 DBIR, with zero-day exploitation of perimeter devices and VPNs receiving significant attention. [2] Microsoft reported that nearly 40,000 CVEs were published in the first half of 2026 and observed the median time from vulnerability discovery in the wild to weaponization falling below 24 hours. [4]
+
+Risk is highest for internet-facing, unpatched or unsupported assets.
+
+Asset inventory is essential because organizations cannot patch systems they do not know exist.
+
+Prioritization should consider exploitability, exposure, business criticality and available compensating controls.
+
+Controls: continuous asset discovery, vulnerability scanning, patch management, secure configuration and segmentation.
+
+5.4 Credential Theft, Account Takeover and Identity Abuse
+
+Identity has become a central security boundary. Attackers may obtain passwords through phishing or infostealers, reuse credentials from unrelated breaches, steal browser session information or abuse valid accounts after an initial compromise. Once inside, legitimate credentials can make malicious activity resemble normal user behavior.
+
+Verizon's credential-stuffing research associated compromised credentials with 22% of breaches reviewed in its 2025 DBIR analysis. It also found credential stuffing to be a substantial share of authentication attempts in the SSO data it studied. [6]
+
+Common methods: password reuse, credential stuffing, phishing, infostealers, session theft and token abuse.
+
+Potential impact: unauthorized access to email, cloud storage, source code, finance systems and sensitive data.
+
+Controls: phishing-resistant MFA, password managers, conditional access, privileged access management, session monitoring and rapid credential revocation.
+
+5.5 Malware and Infostealers
+
+Malware includes malicious programs designed to steal data, disrupt systems, establish persistence or enable follow-on attacks. Infostealers are particularly useful to attackers because they can collect browser passwords, cookies, tokens and other information that can later be used to access additional systems.
+
+In APAC, Verizon's 2025 DBIR reported malware in 83% of breaches in its regional dataset, up from 58% in the previous report, and identified email as a key distribution vector. Ransomware was present in 51% of APAC breaches in that dataset. [7]
+
+Typical delivery: phishing attachments, malicious downloads, cracked software, fake updates and compromised websites.
+
+Controls: endpoint detection and response, application allowlisting where practical, browser hardening, email filtering and patching.
+
+Response priority: isolate affected endpoints, reset exposed credentials, investigate persistence and determine what data was accessed.
+
+5.6 Supply-Chain and Third-Party Attacks
+
+Organizations increasingly depend on cloud providers, SaaS platforms, software libraries, managed services, contractors and technology vendors. This interconnectedness creates a dependency risk: an attacker may compromise a trusted supplier and use that relationship to reach multiple customers.
+
+Verizon reported that third-party involvement doubled to 30% of breaches in its 2025 DBIR. [2] ENISA's 2026 Threat Landscape similarly emphasizes that growing cyber dependencies expand the attack surface. [3]
+
+Risks include compromised software packages, stolen vendor credentials, insecure integrations and vulnerable managed services.
+
+Controls: vendor risk assessment, software bill of materials (SBOM), dependency scanning, least-privilege integrations, contractual security requirements and monitoring of supplier access.
+
+5.7 Distributed Denial-of-Service (DDoS) and Hacktivism
+
+DDoS attacks attempt to make a service unavailable by overwhelming network, application or infrastructure resources. In geopolitical contexts, hacktivist groups may use DDoS as a visible disruption tactic against public or essential services.
+
+ENISA's 2026 Threat Landscape reports that ideology-driven DDoS accounted for 82% of recorded events affecting public administration in its EU dataset, while public administration represented 32% of targeted organizations. These figures describe the ENISA reporting population and should not be treated as a global rate. [3]
+
+Impact: service unavailability, customer disruption, emergency response costs and reputational effects.
+
+Controls: DDoS protection services, rate limiting, CDN/WAF deployment, traffic baselining, resilient architecture and tested failover.
+
+5.8 Cloud and SaaS Security Threats
+
+Cloud environments concentrate identities, data and computing resources. Misconfigured storage, excessive permissions, exposed APIs, compromised credentials and insecure service-to-service trust can create high-impact attack paths. The shared-responsibility model also means that organizations must understand which security controls are provided by the cloud provider and which remain their responsibility.
+
+Common risks: exposed storage, weak IAM, leaked API keys, excessive permissions, insecure APIs and compromised administrator accounts.
+
+Controls: least privilege, strong IAM, MFA, secrets management, logging, continuous configuration monitoring and separation of production environments.
+
+5.9 AI-Enabled Cyber Threats
+
+AI is becoming a force multiplier for attackers and defenders. Threat actors can use AI to draft convincing phishing messages, automate reconnaissance, analyze stolen data, translate content, generate malicious code and support social engineering. The main security concern is not that AI creates every attack from scratch, but that it can reduce the time and expertise required to scale familiar attack techniques.
+
+ENISA's recent threat research describes AI being used to enhance offensive activity and notes the emergence of stand-alone malicious AI systems. Microsoft reports AI use across vulnerability discovery, reconnaissance, phishing, malware, exploit development and post-compromise activity, including increasingly automated attack chains. [4][8]
+
+AI-assisted phishing: higher-quality, personalized and multilingual lures.
+
+AI-assisted reconnaissance: faster processing of public information and target data.
+
+AI-assisted exploitation: faster vulnerability research and attack development.
+
+AI-system risks: prompt injection, insecure tool access, excessive agent permissions and sensitive-data leakage.
+
+Defensive response: apply existing identity, data, application and access controls to AI systems rather than treating AI as a separate security boundary.
+
+6. Common Attack Vectors
+
+Attack vector
+
+How it works
+
+Typical first target
+
+Key defensive control
+
+Phishing
+
+Deceptive email/message directs the user to disclose information or execute content.
+
+Employee account
+
+MFA + email security + awareness
+
+Credential stuffing
+
+Stolen username/password combinations are tested across services.
+
+Authentication portal
+
+MFA + rate limiting + breached-password detection
+
+Exploitation
+
+Attacker abuses a software or configuration vulnerability.
+
+Internet-facing asset
+
+Patch + exposure management + WAF
+
+Malicious attachment/download
+
+User opens or installs malicious content.
+
+Endpoint
+
+EDR + application control
+
+Valid account abuse
+
+Attacker uses legitimate credentials after compromise.
+
+Cloud/SaaS account
+
+Conditional access + UEBA + PAM
+
+Supply-chain compromise
+
+Trusted vendor, package or integration is compromised.
+
+Software/vendor relationship
+
+Vendor risk + SBOM + dependency security
+
+DDoS
+
+Traffic/resources are exhausted to disrupt availability.
+
+Public service
+
+DDoS protection + CDN/WAF
+
+Insider misuse
+
+Authorized user intentionally or accidentally exposes data.
+
+Internal systems
+
+Least privilege + DLP + monitoring
+
+7. Attack Lifecycle Analysis
+
+A useful way to understand the threat landscape is to map common techniques to the stages of an attack. The following simplified lifecycle demonstrates how separate weaknesses can be chained into one incident.
+
+Reconnaissance – identify people, technologies, domains, exposed services and organizational relationships.
+
+Initial access – use phishing, stolen credentials, exploitation or a compromised supplier.
+
+Execution – run malicious commands, scripts or payloads.
+
+Persistence – maintain access using accounts, scheduled tasks, services, tokens or other mechanisms.
+
+Privilege escalation – obtain higher permissions through credential theft or software/configuration weaknesses.
+
+Discovery and lateral movement – identify systems, accounts, shares and valuable data.
+
+Collection and exfiltration – gather sensitive information and move it outside the organization.
+
+Impact – encrypt systems, disrupt services, extort the organization, commit fraud or destroy/alter data.
+
+This lifecycle demonstrates why point solutions are insufficient. Blocking one technique may not prevent an attacker from moving to another stage. Defense-in-depth reduces the probability that a single successful action will become a full organizational compromise.
+
+8. Organizational Impact Analysis
+
+Impact category
+
+Examples
+
+Severity considerations
+
+Confidentiality
+
+Customer records, credentials, intellectual property, financial data
+
+Data sensitivity, number of records, regulatory obligations
+
+Integrity
+
+Altered records, fraudulent transactions, modified software
+
+Business-criticality and ability to detect unauthorized changes
+
+Availability
+
+Ransomware, DDoS, cloud outage, destructive malware
+
+Duration, affected services and operational dependency
+
+Financial
+
+Ransom, recovery, legal costs, lost revenue, incident response
+
+Incident scale and downtime
+
+Operational
+
+Production interruption, manual workarounds, delayed services
+
+Dependency on affected systems
+
+Legal/regulatory
+
+Notification, investigation, contractual penalties
+
+Jurisdiction and type of compromised data
+
+Reputation
+
+Customer trust loss, partner concerns
+
+Visibility and perceived reliability
+
+Strategic
+
+IP theft, espionage, competitive disadvantage
+
+Sensitivity and long-term business value
+
+9. Risk Assessment Matrix
+
+The following qualitative matrix is intended for prioritization, not as a numerical prediction. Actual risk depends on an organization's assets, exposure, controls and threat intelligence.
+
+Threat
+
+Likelihood (general)
+
+Potential impact
+
+Priority for review
+
+Ransomware/extortion
+
+High
+
+Very High
+
+Immediate
+
+Credential compromise
+
+High
+
+High
+
+Immediate
+
+Vulnerability exploitation
+
+High
+
+Very High
+
+Immediate
+
+Phishing/social engineering
+
+High
+
+High
+
+Immediate
+
+Supply-chain compromise
+
+Medium–High
+
+Very High
+
+High
+
+Infostealer/malware
+
+High
+
+High
+
+High
+
+Cloud/IAM misconfiguration
+
+Medium–High
+
+High–Very High
+
+High
+
+DDoS/hacktivism
+
+Medium–High
+
+Medium–High
+
+Context dependent
+
+Insider risk
+
+Medium
+
+High
+
+High
+
+AI-enabled attacks
+
+Growing
+
+High
+
+High
+
+Note: These labels are analytical categories based on the reviewed threat literature and are not universal probabilities. Organizations should calculate their own risk using asset exposure, threat intelligence and control maturity.
+
+10. Defensive Measures and Security Recommendations
+
+10.1 Identity Security
+
+Use phishing-resistant MFA for privileged and high-value accounts where practical.
+
+Apply least privilege and separate administrative accounts from everyday accounts.
+
+Monitor risky sign-ins, impossible travel, token anomalies and unusual privilege changes.
+
+Use password managers and prevent known compromised passwords.
+
+10.2 Vulnerability and Exposure Management
+
+Maintain a continuously updated inventory of endpoints, servers, applications, cloud assets and internet-facing systems.
+
+Prioritize vulnerabilities based on active exploitation, exposure, business criticality and available mitigations.
+
+Patch internet-facing systems quickly and use compensating controls when immediate patching is impossible.
+
+Retire unsupported software and reduce unnecessary attack surface.
+
+10.3 Ransomware Resilience
+
+Maintain offline or immutable backups and test restoration regularly.
+
+Segment critical systems and restrict lateral movement.
+
+Deploy EDR and central logging on important endpoints and servers.
+
+Prepare a documented incident response and business continuity plan.
+
+10.4 Email and User Security
+
+Deploy anti-phishing and attachment/URL scanning controls.
+
+Train users using realistic simulations and clear reporting procedures.
+
+Require secondary verification for sensitive financial or administrative requests.
+
+Protect browsers and block unauthorized script or executable behavior where appropriate.
+
+10.5 Supply-Chain Security
+
+Classify vendors according to access and business criticality.
+
+Review vendor security controls and incident notification obligations.
+
+Use SBOM and dependency scanning for software development.
+
+Limit third-party accounts and integrations to the minimum permissions required.
+
+10.6 AI Security
+
+Inventory organizational AI systems, models, agents, tools and data connections.
+
+Restrict agent permissions and prevent unnecessary access to sensitive systems.
+
+Apply input/output validation and monitoring to AI-enabled applications.
+
+Prevent sensitive data from being sent to unapproved AI services.
+
+Use AI defensively for triage, detection and analysis while maintaining human oversight for high-impact actions.
+
+11. Incident Response and Recovery
+
+Preventive controls reduce risk, but no organization can assume that prevention will be perfect. A mature security program therefore includes incident response and recovery capabilities.
+
+Preparation – maintain an incident response plan, contacts, asset inventory, backups and playbooks.
+
+Detection and analysis – collect alerts, validate the incident and identify affected accounts and systems.
+
+Containment – isolate affected endpoints, disable compromised accounts and block malicious infrastructure.
+
+Eradication – remove persistence, patch exploited weaknesses and reset credentials/tokens.
+
+Recovery – restore trusted systems, validate integrity and return services to operation gradually.
+
+Lessons learned – identify the root cause, update controls and document improvements.
+
+12. Emerging Trends to Monitor
+
+Increasing automation of cyberattack chains using AI agents and autonomous workflows.
+
+Faster weaponization of newly disclosed vulnerabilities.
+
+Greater targeting of identity providers, SaaS platforms and cloud administration.
+
+Continued growth of supply-chain and dependency risk.
+
+More mobile and messaging-based social engineering alongside traditional email phishing.
+
+Expansion of data-theft extortion even where encryption is not deployed.
+
+Geopolitical influence on DDoS, espionage and hacktivist campaigns.
+
+Security challenges created by AI agents with access to enterprise tools and data.
+
+13. Key Findings
+
+Cyber risk is increasingly concentrated around trust: identities, vendors, software, cloud services and human relationships.
+
+Vulnerability management must be continuous because attackers can exploit exposed weaknesses quickly.
+
+Ransomware remains highly disruptive, but data theft and extortion can cause major harm even when encryption is prevented.
+
+Identity protection is fundamental because valid accounts can bypass many traditional perimeter assumptions.
+
+AI increases the scale and speed of familiar attacks, making basic security controls more urgent rather than less important.
+
+Supply-chain dependencies require organizations to assess security beyond their own network boundary.
+
+Resilience requires both prevention and the ability to contain, recover and learn from incidents.
+
+14. Conclusion
+
+The cybersecurity threat landscape in 2025–2026 demonstrates that organizations face a mixture of established and emerging threats. Ransomware, credential compromise, phishing, vulnerability exploitation, malware, supply-chain attacks and DDoS remain important, while AI is increasing the speed and scale at which several of these techniques can be performed.
+
+The most important defensive lesson is that cybersecurity should be treated as a continuous risk-management process. Organizations need visibility of their assets, strong identity controls, rapid vulnerability remediation, secure software and supplier practices, endpoint and network monitoring, reliable backups and tested incident response. AI should be governed as part of the enterprise security architecture, especially when AI agents can access tools, applications or sensitive information.
+
+Ultimately, effective defense is not based on a single security product. It depends on reducing attack surface, limiting attacker privileges, detecting abnormal behavior early, containing incidents quickly and maintaining the ability to recover. The threat landscape will continue to evolve, so organizations must continuously update their security posture based on current threat intelligence and evidence.
+
+15. References
+
+[1] Verizon, 2025 Data Breach Investigations Report (DBIR), analysis of 22,000+ incidents and 12,195 confirmed breaches. https://www.verizon.com/business/en-no/resources/reports/dbir/
+
+[2] Verizon, 2025 DBIR findings and global trends, including vulnerability exploitation, ransomware and third-party involvement. https://www.verizon.com/about/news/2025-data-breach-investigations-report-emea
+
+[3] European Union Agency for Cybersecurity (ENISA), ENISA Threat Landscape 2026, published 22 September 2026; reporting period 1 January–31 December 2025. https://www.enisa.europa.eu/publications/enisa-threat-landscape-2026
+
+[4] Microsoft Security, 2026 Digital Defense Report, published 1 October 2026. https://www.microsoft.com/en-us/security/security-insider/threat-landscape/2026-digital-defense-report
+
+[5] Google Cloud / Mandiant, Ransomware Tactics, Techniques, and Procedures in a Shifting Threat Landscape, 2025 analysis. https://cloud.google.com/blog/topics/threat-intelligence/ransomware-ttps-shifting-threat-landscape
+
+[6] Verizon Business, Additional 2025 DBIR research on credential stuffing and credential abuse. https://www.verizon.com/business/resources/articles/credential-stuffing-attacks-2025-dbir-research/
+
+[7] Verizon Business, 2025 DBIR – Asia-Pacific findings. https://www.verizon.com/about/news/2025-data-breach-investigations-report-apac
+
+[8] ENISA, Threat Landscape research on predictable use of AI and AI-enabled malicious activity. https://www.enisa.europa.eu/sites/default/files/2026-01/ENISA%20Threat%20Landscape%202025_v1.2.pdf
+
+Appendix A – 200+ Word Report Description for Submission
+
+This report presents a detailed analysis of the current cybersecurity threat landscape, with emphasis on recent developments reported during 2025 and 2026. The study examines major cyber threats affecting organizations, including ransomware, phishing and social engineering, vulnerability exploitation, credential theft, malware and infostealers, supply-chain compromise, cloud security risks, DDoS attacks, insider threats and AI-enabled attacks. The report identifies common attack vectors and explains how threat actors can combine multiple techniques to move from initial access to privilege escalation, lateral movement, data theft and operational impact. It also analyzes the possible consequences of cyber incidents across confidentiality, integrity and availability, along with financial, operational, legal and reputational effects. Recent findings from trusted sources such as ENISA, Verizon, Microsoft and Google Cloud/Mandiant are used to support the analysis and to distinguish current evidence from general cybersecurity observations. Special attention is given to the growing role of artificial intelligence in accelerating reconnaissance, phishing, vulnerability discovery, malware development and attack automation. The report concludes with practical recommendations covering identity security, vulnerability management, ransomware resilience, email security, supply-chain risk, cloud security, AI governance, incident response and disaster recovery. The overall objective is to provide a structured and evidence-based understanding of how modern cyber threats can affect organizations and how layered security controls can reduce exposure, improve detection, limit damage and strengthen organizational cyber resilience.
+
+Appendix B – Submission Checklist
+
+Open the DOCX and replace the name if required by the internship portal.
+
+Check whether your internship coordinator requires a company-specific cover page or certificate format.
+
+Save/submit the report as .docx (Word format).
+
+Because this is a technical cybersecurity internship, add your GitHub project URL if the internship portal requires it.
+
+Keep the source references in the report so the analysis is traceable.
+
+Review formatting and page numbers before submission.
